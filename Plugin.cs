@@ -68,12 +68,12 @@ namespace DAONRotation
 
                 if (CurrentMode == "데스매치")
                 {
-                    Loader.GetPlugin("DAONDeathMatchPlugin").OnEnabled();
+                    Loader.GetPlugin("DAONDeathMatch").OnEnabled();
 
                     while (!RoundEnded)
                         yield return Timing.WaitForSeconds(1f);
 
-                    Loader.GetPlugin("DAONDeathMatchPlugin").OnDisabled();
+                    Loader.GetPlugin("DAONDeathMatch").OnDisabled();
                 }
                 else if (CurrentMode == "정전")
                 {
